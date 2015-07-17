@@ -15,6 +15,16 @@ posts = Post.all
   )
 end
 
+Post.create!(
+  title: "New Town",
+  body: "Its the best part of town!"
+)
+
+Comment.create!(
+  post: post,
+  body: "I love New Town"
+)
+
 puts "Seed finished"
 puts "#{Post.count} posts created"
 puts "#{Comment.count} comments created"
