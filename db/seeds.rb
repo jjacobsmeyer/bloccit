@@ -15,12 +15,12 @@ posts = Post.all
   )
 end
 
-Post.create!(
+post = Post.find_or_create_by!(
   title: "New Town",
-  body: "Its the best part of town!"
+  body: "New town is the best part of town"
 )
 
-Comment.create!(
+Comment.find_or_create_by!(
   post: post,
   body: "I love New Town"
 )
