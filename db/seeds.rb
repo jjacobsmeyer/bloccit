@@ -15,6 +15,16 @@ posts = Post.all
   )
 end
 
+post = Post.find_or_create_by!(
+  title: "New Town",
+  body: "New town is the best part of town"
+)
+
+Comment.find_or_create_by!(
+  post: post,
+  body: "I love New Town"
+)
+
 puts "Seed finished"
 puts "#{Post.count} posts created"
 puts "#{Comment.count} comments created"
