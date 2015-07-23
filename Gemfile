@@ -35,6 +35,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'faker'
 gem 'figaro', '1.0'
 gem 'devise'
+gem 'pundit'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
