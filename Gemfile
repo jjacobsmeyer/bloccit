@@ -36,6 +36,7 @@ gem 'faker'
 gem 'figaro', '1.0'
 gem 'devise'
 gem 'pundit'
+gem 'redcarpet'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
