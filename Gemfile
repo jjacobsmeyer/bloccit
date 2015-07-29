@@ -37,6 +37,9 @@ gem 'figaro', '1.0'
 gem 'devise'
 gem 'pundit'
 gem 'redcarpet'
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'fog'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
