@@ -42,7 +42,8 @@ posts = Post.all
 
 100.times do
   Comment.create!(
-    #users.sample, # we have not associated Users with Comments.
+    user: users.sample,
+    #topic: topics.sample, # I don't think this is needed.
     post: posts.sample,
     body: Faker::Lorem.paragraph
   )
