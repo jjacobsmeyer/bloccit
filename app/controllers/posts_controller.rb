@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
-    @comments = @post.comments 
+    @comments = @post.comments
     @topic = @post.topic
     @comment = Comment.new
     authorize @post
