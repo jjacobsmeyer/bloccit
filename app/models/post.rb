@@ -18,6 +18,18 @@ class Post < ActiveRecord::Base
     votes.sum(:value)
   end
 
+  def save_with_initial_vote
+    transaction do
+      save!
+      create_vote!
+    end
+    true
+
+  rescue
+    false
+  end
+
+
   default_scope { order('rank DESC') }
 
   validates :title, length: {minimum: 5 }, presence: true
@@ -35,6 +47,10 @@ class Post < ActiveRecord::Base
 
   def create_vote
     user.votes.create(value: 1, post: self)
+  end
+
+  def create_vote!
+    user.votes.create!(value: 1, post: self)
   end
 
  end
