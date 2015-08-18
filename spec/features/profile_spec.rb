@@ -27,12 +27,12 @@ describe "Visiting profiles" do
 
   end
 
+
+  describe "signed in"
+
   before do
     login_as(@user, :scope => :user)
   end
-
-
-  describe "signed in"
 
     it "shows own profile" do
       visit user_path(@user)
