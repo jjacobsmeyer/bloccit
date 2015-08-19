@@ -5,14 +5,14 @@
 #
 # Generated August 19, 2015
 #
-# This configuration file is custom generated for Bloccit_3
+# This configuration file is custom generated for app38859174@heroku.com_1
 #
 # For full documentation of agent configuration options, please refer to
 # https://docs.newrelic.com/docs/agents/ruby-agent/installation-configuration/ruby-agent-configuration
 
 common: &default_settings
   # Required license key associated with your New Relic account.
-  license_key: 3142b514ae08f8999a255276cf7f70735d40d6de
+  license_key: 75a954b6ce44a30ab3b293924f43f4bacea52749
 
   # Your application name. Renaming here affects where data displays in New
   # Relic.  For more details, see https://docs.newrelic.com/docs/apm/new-relic-apm/maintenance/renaming-applications

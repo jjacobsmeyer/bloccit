@@ -9,6 +9,10 @@ group :production do
   gem 'rails_12factor'
 end
 
+gem 'rack-timeout'
+gem 'puma', group: :production
+gem 'puma', group: :development
+
 group :development do
   gem 'sqlite3'
   gem 'pry-rails'
@@ -21,8 +25,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-
-gem 'newrelic_rpm'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -43,6 +45,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog'
 gem 'will_paginate', '~> 3.0.5'
+gem 'newrelic_rpm'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
