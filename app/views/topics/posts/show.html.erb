@@ -11,7 +11,9 @@
     <p><%= markdown_to_html @post.body %></p>
     <%= image_tag(@post.image.url) %>
     <h3>Comments</h3>
-    <%= render partial: 'comments/comment', collection: @comments %>
+    <div class='js-comments'>
+      <%= render partial: 'comments/comment', collection: @comments %>
+    </div>
   </div>
   <div class="col-md-4">
     <% if policy(@post).edit? %>
@@ -29,8 +31,10 @@
       </small>
     </div>
     <%= render partial: 'favorites/favorite', locals: { post: @post } %>
+    <div class='new-comment'>
     <% if policy(@comment).new? %>
       <%= render partial: "comments/form", locals: { post: @post, comment: @comment } %>
     <% end %>
+    </div>
   </div>
 </div>
